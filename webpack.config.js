@@ -1,5 +1,6 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
+const ExtractCssChunksPlugin = require('extract-css-chunks-webpack-plugin');
 
 const entries = {};
 
@@ -26,6 +27,20 @@ module.exports = {
       { test: /\.tsx?$/, loader: 'ts-loader' },
       { test: /\.jsx$/, loader: 'babel-loader' },
       { test: /\.js$/, loader: 'babel-loader' },
+      {
+        test: /\.(css|scss)$/,
+        loader: [
+            ExtractCssChunksPlugin.loader,
+            'css-loader',
+            {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: () => [require('autoprefixer')],
+                },
+            },
+            'sass-loader',
+        ],
+    },
     ],
   },
 };

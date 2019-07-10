@@ -32966,7 +32966,7 @@ const App_1 = __importDefault(__webpack_require__(/*! ./App */ "./src/server/App
 module.exports.testPage = async () => {
     const response = {
         statusCode: 200,
-        body: server_1.default.renderToString(React.createElement(App_1.default, { initialTItle: "Forms with Formik + TypeScript" })),
+        body: server_1.default.renderToString(React.createElement(App_1.default, { title: "Forms with Formik + TypeScript" })),
         headers: {
             'content-type': 'text/html; charset=utf-8'
         }
