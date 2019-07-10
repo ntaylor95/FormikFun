@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "allowJs": true,
+        "checkJs": false,
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "module": "commonjs",
+        "noUnusedLocals": true,
+        "outDir": ".lib",
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "esnext",
+        "mapRoot": "./.lib/",
+        "moduleResolution": "node",
+        "jsx": "react"
+    },
+    "exclude": [
+        "node_modules",
+        "*.test.ts"
+    ]
+}
