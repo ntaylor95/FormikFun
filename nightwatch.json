@@ -10,9 +10,15 @@
     },
     "test_settings": {
         "default": {
+            "filter": "./tests/e2e/*",
             "desiredCapabilities": {
                 "browserName": "chrome"
             }
+        },
+        "unittests": {
+            "unit_tests_mode": true,
+            "filter": "./tests/unit/*",
+            "exclude": ""
         }
     },
     "globals": "./examples/globalsModule.js",

@@ -9,6 +9,5 @@ module.exports = {
       //.click('button[type=submit]')
       .pause(1000)
       .assert.containsText('h1', 'Forms with Formik + TypeScript')
-      .end();
   }
 };
